@@ -62,4 +62,12 @@ class Pelicula {
     overview = json['overview'];
     releaseDate = json['release_date'];
   }
+
+  String getPosterImg() {
+    if (posterPath == null) {
+      return 'https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=6&m=1222357475&s=612x612&w=0&h=p8Qv0TLeMRxaES5FNfb09jK3QkJrttINH2ogIBXZg-c=';
+    }
+
+    return 'https://image.tmdb.org/t/p/w500$posterPath';
+  }
 }
